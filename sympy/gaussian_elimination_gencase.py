@@ -16,7 +16,7 @@ for row in m:
 
 print_matrix(m)
 
-# R3 - R2, R2 - R1
+# -R2 + R3, -R1 + R2
 for i in range(len(m[0])):
     m[2][i] -= m[1][i]
     m[1][i] -= m[0][i]
@@ -31,7 +31,7 @@ for row in m[1:]:
 
 print_matrix(m)
 
-# R3 - R2
+# -R2 + R3
 for i in range(len(m[0])):
     m[2][i] -= m[1][i]
 
