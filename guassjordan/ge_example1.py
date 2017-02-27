@@ -1,16 +1,10 @@
 from fractions import Fraction
-
-
-def print_matrix(m):
-    for row in m:
-        print(row)
-    print()
+from getools import print_matrix
 
 
 m = [[Fraction(2, 1), Fraction(1, 1), Fraction(-1, 1), Fraction(8, 1)],
      [Fraction(-3, 1), Fraction(-1, 1), Fraction(2, 1), Fraction(-11, 1)],
      [Fraction(-2, 1), Fraction(1, 1), Fraction(2, 1), Fraction(-3, 1)]]
-
 
 print_matrix(m)
 
