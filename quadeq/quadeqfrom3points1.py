@@ -49,3 +49,29 @@ for i in range(len(m[1])):
 print_matrix(m)
 
 # Set the coefficient of c (the 3rd value in the 3rd row of m) to 1
+val = 1 / m[2][2]
+for i in range(len(m[2])):
+    m[2][i] *= val
+
+print_matrix(m)
+
+# Use the last row to make the third value in rows 1 and 2 equal 0
+val1 = -m[1][2]
+val2 = -m[0][2] 
+for i in range(len(m[0])):
+    m[1][i] += val1 * m[2][i]
+    m[0][i] += val2 * m[2][i]
+
+print_matrix(m)
+
+# Use the middle row to make the 2nd value in row 1 equal 0
+val = -m[0][1] 
+for i in range(len(m[0])):
+    m[0][i] += val * m[1][i]
+
+print_matrix(m)
+
+# print out the resulting quadratic equation
+quadeq = 'f(x) = {0}x^2 + {1}x + {2}'
+
+print(quadeq.format(m[0][3], m[1][3], m[2][3]))
