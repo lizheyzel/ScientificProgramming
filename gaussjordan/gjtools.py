@@ -38,7 +38,8 @@ def reduced_row_echelon(m):
     add_row(m, -m[0][2], 3, 1)
 
     add_row(m, -m[0][1], 2, 1)
-    print_matrix(m)
+    
+    return m
 
 if __name__ == '__main__':
     import doctest
