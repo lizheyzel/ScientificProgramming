@@ -13,6 +13,3 @@ def from_memory(filename):
             matrix[i] = [int(elem) for elem in row]
 
     return m
-
-
-print(from_memory('matrices.dat'))
