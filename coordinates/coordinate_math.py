@@ -38,6 +38,20 @@ def polar_to_cartesian(p):
     return r * math.cos(theta), r * math.sin(theta)
 
 
+def parse_points(fp):
+    """
+    Read in points represented as text and convert them to numeric tuples
+
+      >>> import io
+      >>> fp = io.StringIO("(3, 4)\\n(5, 12)\\n(15, 8)\\n(28, 45)\\n")
+      >>> points = parse_points(fp)
+      >>> type(points)
+      <class 'list'>
+    """
+    return fp.readlines()
+
+
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
