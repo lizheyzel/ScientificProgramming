@@ -47,9 +47,20 @@ def parse_points(fp):
       >>> points = parse_points(fp)
       >>> type(points)
       <class 'list'>
+      >>> len(points)
+      4
+      >>> p1 = points[0]
+      >>> p1
+      (3, 4)
+      >>> points[-1][-1]
+      45
     """
-    return fp.readlines()
-
+    points = fp.readlines()
+    for i in range(len(points)):
+        points[i] = points[i].strip("( \n)")
+        points[i] = points[i].split(', ')
+        points[i] = int(points[i][0]), int(points[i][1])
+    return points
 
 
 if __name__ == '__main__':
